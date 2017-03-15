@@ -1,0 +1,3 @@
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\Proyecto1Tiempos.exe.config
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.exe
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.pdb
