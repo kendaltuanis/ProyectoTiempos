@@ -87,13 +87,13 @@ namespace Proyecto1Tiempos.Vistas
             // sorteosToolStripMenuItem
             // 
             this.sorteosToolStripMenuItem.Name = "sorteosToolStripMenuItem";
-            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sorteosToolStripMenuItem.Text = "Sorteos";
             // 
             // dineroToolStripMenuItem
             // 
             this.dineroToolStripMenuItem.Name = "dineroToolStripMenuItem";
-            this.dineroToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.dineroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dineroToolStripMenuItem.Text = "Dinero";
             // 
             // ganadoresToolStripMenuItem

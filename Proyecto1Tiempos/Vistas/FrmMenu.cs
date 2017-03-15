@@ -19,12 +19,7 @@ namespace Proyecto1Tiempos.Vistas
             MenuTiles();
         }
         
-        private void linkOpciones_Click(object sender, EventArgs e)
-        {
-            contextMenuOpciones.Show(linkOpciones, new Point(-(linkOpciones.Width), linkOpciones.Height));
-
-        }
-      
+              
         /*
           Evento 'Click' que se encarga de obtener los controles de un determinado 'MetroUserControl'
           y agregarlos a un panel(pnlMain) en el Frame.
@@ -116,6 +111,13 @@ namespace Proyecto1Tiempos.Vistas
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        // Evento 'Click' que se encarga de agregar un contextMenu ya hecho 'contextMenuOpciones' al control link 'linkOpciones'
+        private void linkOpciones_Click(object sender, EventArgs e)
+        {
+            contextMenuOpciones.Show(linkOpciones, new Point(-(linkOpciones.Width), linkOpciones.Height));
+
         }
 
 
