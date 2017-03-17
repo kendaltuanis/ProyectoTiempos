@@ -12,6 +12,7 @@ namespace Proyecto1Tiempos.Vistas
     {
 
         private Control[] tiles;
+        private String title = "Tiempos";
 
         public FrmMenu()
         {
@@ -29,10 +30,10 @@ namespace Proyecto1Tiempos.Vistas
         protected void button_Click(object sender, EventArgs e)
         {
             LimpiarControles();
-            PanelVisible();
+            BackPanelVisible();
 
             MetroTile button = sender as MetroTile;
-
+            String name = button.Name;
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(s => s.GetTypes())
                 .Where(p => typeof(MetroUserControl).IsAssignableFrom(p))
@@ -41,10 +42,11 @@ namespace Proyecto1Tiempos.Vistas
             foreach (var imp in types)
             {
                 MetroUserControl implementation = (MetroUserControl)Activator.CreateInstance(imp);
-                if (implementation.Name.Equals(button.Name))
+                if (implementation.Name.Equals(name))
                 {
                     implementation.Dock = DockStyle.Fill;
                     this.pnlMenu.Controls.Add(implementation);
+                    this.lblTitulo.Text = name.Substring(1,name.Length-1);
                     return;
                 }
 
@@ -66,7 +68,8 @@ namespace Proyecto1Tiempos.Vistas
             {
                 pnlMenu.Controls.Add(item);
             }
-            PanelVisible(false);
+            lblTitulo.Text = title;
+            BackPanelVisible(false);
 
         }
 
@@ -88,23 +91,18 @@ namespace Proyecto1Tiempos.Vistas
         }
 
         /*
-           Método que se encarga de hacer visible o/y invisibles algunos de los páneles
+           Método que se encarga de hacer visible o/y invisible el 'backPanel'
            
-           TRUE =  pnlBackMenu.Visible = true Y pnlTitulo.Visible = false
-           FALSE =  pnlBackMenu.Visible = false Y pnlTitulo.Visible = true
            Por default está en TRUE
         */
-        private void PanelVisible(bool backMenu = true)
+        private void BackPanelVisible(bool backMenu = true)
         {
             if (backMenu)
             {
                 this.pnlBackMenu.Visible = true;
-                this.pnlTitulo.Visible = false;
                 return;
             }
-
             this.pnlBackMenu.Visible = false;
-            this.pnlTitulo.Visible = true;
         }
 
         // Cierra el form principal o 'FrmLogin' totalmente, porque antes estaba oculto

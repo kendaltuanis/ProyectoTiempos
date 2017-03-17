@@ -118,40 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile_apuestas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile_apuestas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile_sorteos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile_sorteos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="tile_sorteos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tile_sorteos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tile_resultados" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile_resultados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_money.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="configuratition_focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\configuratition_focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="configuratition_no_focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\configuratition_no_focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_loteria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_loteria.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loteria_fondo_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loteria_fondo_login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tile_apuestas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile_apuestas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile_resultados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile_resultados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuratition_no_focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\configuratition_no_focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loteria_fondo_login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loteria_fondo_login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="configuratition_focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\configuratition_focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loteria_fondo_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loteria_fondo_login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile_sorteos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile_sorteos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_money.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

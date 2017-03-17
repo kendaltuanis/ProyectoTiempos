@@ -45,7 +45,7 @@ namespace Proyecto1Tiempos.Vistas
             this.linkBack = new MetroFramework.Controls.MetroLink();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pnlBackMenu = new MetroFramework.Controls.MetroPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlTitulo = new MetroFramework.Controls.MetroPanel();
             this.contextMenuOpciones.SuspendLayout();
@@ -87,13 +87,13 @@ namespace Proyecto1Tiempos.Vistas
             // sorteosToolStripMenuItem
             // 
             this.sorteosToolStripMenuItem.Name = "sorteosToolStripMenuItem";
-            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.sorteosToolStripMenuItem.Text = "Sorteos";
             // 
             // dineroToolStripMenuItem
             // 
             this.dineroToolStripMenuItem.Name = "dineroToolStripMenuItem";
-            this.dineroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dineroToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.dineroToolStripMenuItem.Text = "Dinero";
             // 
             // ganadoresToolStripMenuItem
@@ -110,9 +110,9 @@ namespace Proyecto1Tiempos.Vistas
             this.pnlMenu.HorizontalScrollbarBarColor = true;
             this.pnlMenu.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlMenu.HorizontalScrollbarSize = 10;
-            this.pnlMenu.Location = new System.Drawing.Point(23, 84);
+            this.pnlMenu.Location = new System.Drawing.Point(23, 87);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(569, 348);
+            this.pnlMenu.Size = new System.Drawing.Size(569, 356);
             this.pnlMenu.TabIndex = 1;
             this.pnlMenu.VerticalScrollbarBarColor = true;
             this.pnlMenu.VerticalScrollbarHighlightOnWheel = false;
@@ -123,7 +123,7 @@ namespace Proyecto1Tiempos.Vistas
             this.UResultados.ActiveControl = null;
             this.UResultados.BackColor = System.Drawing.Color.LightSteelBlue;
             this.UResultados.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.UResultados.Location = new System.Drawing.Point(49, 170);
+            this.UResultados.Location = new System.Drawing.Point(51, 170);
             this.UResultados.Name = "UResultados";
             this.UResultados.Size = new System.Drawing.Size(232, 102);
             this.UResultados.Style = MetroFramework.MetroColorStyle.Red;
@@ -145,7 +145,7 @@ namespace Proyecto1Tiempos.Vistas
             this.USorteos.ActiveControl = null;
             this.USorteos.BackColor = System.Drawing.Color.LightSteelBlue;
             this.USorteos.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.USorteos.Location = new System.Drawing.Point(49, 40);
+            this.USorteos.Location = new System.Drawing.Point(51, 40);
             this.USorteos.Name = "USorteos";
             this.USorteos.Size = new System.Drawing.Size(232, 102);
             this.USorteos.Style = MetroFramework.MetroColorStyle.Red;
@@ -167,7 +167,7 @@ namespace Proyecto1Tiempos.Vistas
             this.UApuestas.ActiveControl = null;
             this.UApuestas.BackColor = System.Drawing.Color.LightSteelBlue;
             this.UApuestas.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.UApuestas.Location = new System.Drawing.Point(287, 40);
+            this.UApuestas.Location = new System.Drawing.Point(289, 40);
             this.UApuestas.Name = "UApuestas";
             this.UApuestas.Size = new System.Drawing.Size(232, 102);
             this.UApuestas.Style = MetroFramework.MetroColorStyle.Red;
@@ -222,15 +222,15 @@ namespace Proyecto1Tiempos.Vistas
             this.pnlBackMenu.VerticalScrollbarSize = 10;
             this.pnlBackMenu.Visible = false;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 36);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tiempos";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Modern No. 20", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(84, 4);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(133, 36);
+            this.lblTitulo.TabIndex = 5;
+            this.lblTitulo.Text = "Tiempos";
             // 
             // label2
             // 
@@ -243,7 +243,7 @@ namespace Proyecto1Tiempos.Vistas
             // 
             // pnlTitulo
             // 
-            this.pnlTitulo.Controls.Add(this.label1);
+            this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Controls.Add(this.label2);
             this.pnlTitulo.HorizontalScrollbarBarColor = true;
             this.pnlTitulo.HorizontalScrollbarHighlightOnWheel = false;
@@ -296,7 +296,7 @@ namespace Proyecto1Tiempos.Vistas
         private MetroFramework.Controls.MetroTile UResultados;
         private MetroFramework.Controls.MetroTile USorteos;
         private MetroFramework.Controls.MetroTile UApuestas;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroPanel pnlTitulo;
     }
