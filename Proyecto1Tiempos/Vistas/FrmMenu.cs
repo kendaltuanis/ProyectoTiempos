@@ -34,6 +34,8 @@ namespace Proyecto1Tiempos.Vistas
 
             MetroTile button = sender as MetroTile;
             String name = button.Name;
+            this.lblTitulo.Text = name.Substring(1, name.Length - 1);
+
             var types = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(s => s.GetTypes())
                 .Where(p => typeof(MetroUserControl).IsAssignableFrom(p))
@@ -45,8 +47,7 @@ namespace Proyecto1Tiempos.Vistas
                 if (implementation.Name.Equals(name))
                 {
                     implementation.Dock = DockStyle.Fill;
-                    this.pnlMenu.Controls.Add(implementation);
-                    this.lblTitulo.Text = name.Substring(1,name.Length-1);
+                    this.pnlMenu.Controls.Add(implementation);                   
                     return;
                 }
 

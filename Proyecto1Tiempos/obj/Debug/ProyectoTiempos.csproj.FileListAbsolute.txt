@@ -17,3 +17,16 @@ C:\Users\Estudiante\Source\Repos\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proy
 C:\Users\Estudiante\Source\Repos\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UResultados.resources
 C:\Users\Estudiante\Source\Repos\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.USorteos.resources
 C:\Users\Estudiante\Source\Repos\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\ProyectoTiempos.csproj.GenerateResource.Cache
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\Proyecto1Tiempos.exe
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\Proyecto1Tiempos.pdb
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\MetroFramework.Design.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\MetroFramework.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\ProyectoTiempos.csprojResolveAssemblyReference.cache
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Properties.Resources.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.FrmLogin.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.FrmMenu.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UApuestas.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UResultados.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.USorteos.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\ProyectoTiempos.csproj.GenerateResource.Cache
