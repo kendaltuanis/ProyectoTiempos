@@ -30,3 +30,13 @@ C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Ti
 C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UResultados.resources
 C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.USorteos.resources
 C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\ProyectoTiempos.csproj.GenerateResource.Cache
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\DBAccess.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\HelpersSQL.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\Npgsql.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\DBAccess.pdb
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\HelpersSQL.pdb
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\Npgsql.xml
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UGanadores.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UNuevoSorteo.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.FrmDinero.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UGanancia.resources

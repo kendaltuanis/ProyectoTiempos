@@ -5,6 +5,9 @@ using MetroFramework.Forms;
 using MetroFramework.Controls;
 using System.Linq;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+
 
 namespace Proyecto1Tiempos.Vistas
 {
@@ -33,7 +36,12 @@ namespace Proyecto1Tiempos.Vistas
             BackPanelVisible();
 
             MetroTile button = sender as MetroTile;
-            String name = button.Name;
+            BusquedaUser(button.Tag.ToString());
+        
+        }
+
+        private void BusquedaUser(String name) {
+  
             this.lblTitulo.Text = name.Substring(1, name.Length - 1);
 
             var types = AppDomain.CurrentDomain.GetAssemblies()
@@ -41,13 +49,14 @@ namespace Proyecto1Tiempos.Vistas
                 .Where(p => typeof(MetroUserControl).IsAssignableFrom(p))
                 .Where(a => !a.FullName.Equals("MetroFramework.Controls.MetroUserControl"));
 
+
             foreach (var imp in types)
             {
                 MetroUserControl implementation = (MetroUserControl)Activator.CreateInstance(imp);
                 if (implementation.Name.Equals(name))
                 {
                     implementation.Dock = DockStyle.Fill;
-                    this.pnlMenu.Controls.Add(implementation);                   
+                    this.pnlMenu.Controls.Add(implementation);
                     return;
                 }
 
@@ -65,10 +74,8 @@ namespace Proyecto1Tiempos.Vistas
 
             LimpiarControles();
 
-            foreach (Control item in tiles)
-            {
-                pnlMenu.Controls.Add(item);
-            }
+            this.pnlMenu.Controls.AddRange(tiles.Select(c => c).ToArray());
+
             lblTitulo.Text = title;
             BackPanelVisible(false);
 
@@ -84,6 +91,8 @@ namespace Proyecto1Tiempos.Vistas
                 tiles[cont] = item;
                 cont++;
             }
+
+            
         }
 
         // Método que se usa para limpiar los controles del panel 'pnlMain' y dejarlo en blanco
@@ -92,18 +101,12 @@ namespace Proyecto1Tiempos.Vistas
         }
 
         /*
-           Método que se encarga de hacer visible o/y invisible el 'backPanel'
-           
+           Método que se encarga de hacer visible o/y invisible el 'backPanel'          
            Por default está en TRUE
         */
         private void BackPanelVisible(bool backMenu = true)
         {
-            if (backMenu)
-            {
-                this.pnlBackMenu.Visible = true;
-                return;
-            }
-            this.pnlBackMenu.Visible = false;
+            this.pnlBackMenu.Visible = backMenu;
         }
 
         // Cierra el form principal o 'FrmLogin' totalmente, porque antes estaba oculto
@@ -119,6 +122,19 @@ namespace Proyecto1Tiempos.Vistas
 
         }
 
+        protected void ToolStrips_Click(object sender, EventArgs e) {
 
+            LimpiarControles();
+            BackPanelVisible();
+
+            ToolStripMenuItem strip = sender as ToolStripMenuItem;
+            BusquedaUser(strip.Tag.ToString());
+        }
+
+        private void gananciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDinero ofrmDinero = new FrmDinero();
+            ofrmDinero.ShowDialog();
+        }
     }
 }

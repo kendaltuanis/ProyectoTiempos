@@ -36,12 +36,13 @@ namespace Proyecto1Tiempos.Vistas
             this.contextMenuOpciones = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sorteosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gananciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ganadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gananciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMenu = new MetroFramework.Controls.MetroPanel();
-            this.UResultados = new MetroFramework.Controls.MetroTile();
-            this.USorteos = new MetroFramework.Controls.MetroTile();
-            this.UApuestas = new MetroFramework.Controls.MetroTile();
+            this.tileResultados = new MetroFramework.Controls.MetroTile();
+            this.tileSorteos = new MetroFramework.Controls.MetroTile();
+            this.tileApuestas = new MetroFramework.Controls.MetroTile();
             this.linkBack = new MetroFramework.Controls.MetroLink();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pnlBackMenu = new MetroFramework.Controls.MetroPanel();
@@ -71,42 +72,56 @@ namespace Proyecto1Tiempos.Vistas
             // 
             this.contextMenuOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administrarToolStripMenuItem,
-            this.ganadoresToolStripMenuItem});
+            this.ganadoresToolStripMenuItem,
+            this.gananciaToolStripMenuItem});
             this.contextMenuOpciones.Name = "contextMenuOpciones";
-            this.contextMenuOpciones.Size = new System.Drawing.Size(162, 48);
+            this.contextMenuOpciones.Size = new System.Drawing.Size(182, 92);
             // 
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sorteosToolStripMenuItem,
-            this.dineroToolStripMenuItem});
+            this.gananciasToolStripMenuItem});
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.administrarToolStripMenuItem.Text = "Mantenimientos";
             // 
             // sorteosToolStripMenuItem
             // 
             this.sorteosToolStripMenuItem.Name = "sorteosToolStripMenuItem";
-            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.sorteosToolStripMenuItem.Text = "Sorteos";
+            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sorteosToolStripMenuItem.Tag = "UNuevoSorteo";
+            this.sorteosToolStripMenuItem.Text = "Nuevo Sorteo";
+            this.sorteosToolStripMenuItem.Click += new System.EventHandler(this.ToolStrips_Click);
             // 
-            // dineroToolStripMenuItem
+            // gananciasToolStripMenuItem
             // 
-            this.dineroToolStripMenuItem.Name = "dineroToolStripMenuItem";
-            this.dineroToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.dineroToolStripMenuItem.Text = "Dinero";
+            this.gananciasToolStripMenuItem.Name = "gananciasToolStripMenuItem";
+            this.gananciasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gananciasToolStripMenuItem.Text = "Dinero";
+            this.gananciasToolStripMenuItem.Click += new System.EventHandler(this.gananciasToolStripMenuItem_Click);
             // 
             // ganadoresToolStripMenuItem
             // 
             this.ganadoresToolStripMenuItem.Name = "ganadoresToolStripMenuItem";
-            this.ganadoresToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.ganadoresToolStripMenuItem.Text = "Ganadores";
+            this.ganadoresToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.ganadoresToolStripMenuItem.Tag = "UGanadores";
+            this.ganadoresToolStripMenuItem.Text = "Números ganadores";
+            this.ganadoresToolStripMenuItem.Click += new System.EventHandler(this.ToolStrips_Click);
+            // 
+            // gananciaToolStripMenuItem
+            // 
+            this.gananciaToolStripMenuItem.Name = "gananciaToolStripMenuItem";
+            this.gananciaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.gananciaToolStripMenuItem.Tag = "UGanancia";
+            this.gananciaToolStripMenuItem.Text = "Ganancia";
+            this.gananciaToolStripMenuItem.Click += new System.EventHandler(this.ToolStrips_Click);
             // 
             // pnlMenu
             // 
-            this.pnlMenu.Controls.Add(this.UResultados);
-            this.pnlMenu.Controls.Add(this.USorteos);
-            this.pnlMenu.Controls.Add(this.UApuestas);
+            this.pnlMenu.Controls.Add(this.tileResultados);
+            this.pnlMenu.Controls.Add(this.tileSorteos);
+            this.pnlMenu.Controls.Add(this.tileApuestas);
             this.pnlMenu.HorizontalScrollbarBarColor = true;
             this.pnlMenu.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlMenu.HorizontalScrollbarSize = 10;
@@ -118,71 +133,74 @@ namespace Proyecto1Tiempos.Vistas
             this.pnlMenu.VerticalScrollbarHighlightOnWheel = false;
             this.pnlMenu.VerticalScrollbarSize = 10;
             // 
-            // UResultados
+            // tileResultados
             // 
-            this.UResultados.ActiveControl = null;
-            this.UResultados.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.UResultados.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.UResultados.Location = new System.Drawing.Point(51, 170);
-            this.UResultados.Name = "UResultados";
-            this.UResultados.Size = new System.Drawing.Size(232, 102);
-            this.UResultados.Style = MetroFramework.MetroColorStyle.Red;
-            this.UResultados.TabIndex = 4;
-            this.UResultados.Text = "Resultados";
-            this.UResultados.TileImage = global::Proyecto1Tiempos.Properties.Resources.tile_resultados;
-            this.UResultados.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UResultados.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.UResultados.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.UResultados.UseCustomBackColor = true;
-            this.UResultados.UseCustomForeColor = true;
-            this.UResultados.UseSelectable = true;
-            this.UResultados.UseStyleColors = true;
-            this.UResultados.UseTileImage = true;
-            this.UResultados.Click += new System.EventHandler(this.button_Click);
+            this.tileResultados.ActiveControl = null;
+            this.tileResultados.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tileResultados.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.tileResultados.Location = new System.Drawing.Point(51, 170);
+            this.tileResultados.Name = "tileResultados";
+            this.tileResultados.Size = new System.Drawing.Size(232, 102);
+            this.tileResultados.Style = MetroFramework.MetroColorStyle.Red;
+            this.tileResultados.TabIndex = 4;
+            this.tileResultados.Tag = "UResultados";
+            this.tileResultados.Text = "Resultados";
+            this.tileResultados.TileImage = global::Proyecto1Tiempos.Properties.Resources.tile_resultados;
+            this.tileResultados.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileResultados.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileResultados.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileResultados.UseCustomBackColor = true;
+            this.tileResultados.UseCustomForeColor = true;
+            this.tileResultados.UseSelectable = true;
+            this.tileResultados.UseStyleColors = true;
+            this.tileResultados.UseTileImage = true;
+            this.tileResultados.Click += new System.EventHandler(this.button_Click);
             // 
-            // USorteos
+            // tileSorteos
             // 
-            this.USorteos.ActiveControl = null;
-            this.USorteos.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.USorteos.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.USorteos.Location = new System.Drawing.Point(51, 40);
-            this.USorteos.Name = "USorteos";
-            this.USorteos.Size = new System.Drawing.Size(232, 102);
-            this.USorteos.Style = MetroFramework.MetroColorStyle.Red;
-            this.USorteos.TabIndex = 5;
-            this.USorteos.Text = "Sorteos";
-            this.USorteos.TileImage = global::Proyecto1Tiempos.Properties.Resources.tile_apuestas;
-            this.USorteos.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.USorteos.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.USorteos.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.USorteos.UseCustomBackColor = true;
-            this.USorteos.UseCustomForeColor = true;
-            this.USorteos.UseSelectable = true;
-            this.USorteos.UseStyleColors = true;
-            this.USorteos.UseTileImage = true;
-            this.USorteos.Click += new System.EventHandler(this.button_Click);
+            this.tileSorteos.ActiveControl = null;
+            this.tileSorteos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tileSorteos.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.tileSorteos.Location = new System.Drawing.Point(51, 40);
+            this.tileSorteos.Name = "tileSorteos";
+            this.tileSorteos.Size = new System.Drawing.Size(232, 102);
+            this.tileSorteos.Style = MetroFramework.MetroColorStyle.Red;
+            this.tileSorteos.TabIndex = 5;
+            this.tileSorteos.Tag = "USorteos";
+            this.tileSorteos.Text = "Sorteos";
+            this.tileSorteos.TileImage = global::Proyecto1Tiempos.Properties.Resources.tile_apuestas;
+            this.tileSorteos.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileSorteos.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileSorteos.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileSorteos.UseCustomBackColor = true;
+            this.tileSorteos.UseCustomForeColor = true;
+            this.tileSorteos.UseSelectable = true;
+            this.tileSorteos.UseStyleColors = true;
+            this.tileSorteos.UseTileImage = true;
+            this.tileSorteos.Click += new System.EventHandler(this.button_Click);
             // 
-            // UApuestas
+            // tileApuestas
             // 
-            this.UApuestas.ActiveControl = null;
-            this.UApuestas.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.UApuestas.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.UApuestas.Location = new System.Drawing.Point(289, 40);
-            this.UApuestas.Name = "UApuestas";
-            this.UApuestas.Size = new System.Drawing.Size(232, 102);
-            this.UApuestas.Style = MetroFramework.MetroColorStyle.Red;
-            this.UApuestas.TabIndex = 6;
-            this.UApuestas.Text = "Apuestas";
-            this.UApuestas.TileImage = global::Proyecto1Tiempos.Properties.Resources.tile_sorteos;
-            this.UApuestas.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UApuestas.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.UApuestas.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.UApuestas.UseCustomBackColor = true;
-            this.UApuestas.UseCustomForeColor = true;
-            this.UApuestas.UseSelectable = true;
-            this.UApuestas.UseStyleColors = true;
-            this.UApuestas.UseTileImage = true;
-            this.UApuestas.Click += new System.EventHandler(this.button_Click);
+            this.tileApuestas.ActiveControl = null;
+            this.tileApuestas.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tileApuestas.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.tileApuestas.Location = new System.Drawing.Point(289, 40);
+            this.tileApuestas.Name = "tileApuestas";
+            this.tileApuestas.Size = new System.Drawing.Size(232, 102);
+            this.tileApuestas.Style = MetroFramework.MetroColorStyle.Red;
+            this.tileApuestas.TabIndex = 6;
+            this.tileApuestas.Tag = "UApuestas";
+            this.tileApuestas.Text = "Apuestas";
+            this.tileApuestas.TileImage = global::Proyecto1Tiempos.Properties.Resources.tile_sorteos;
+            this.tileApuestas.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileApuestas.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileApuestas.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileApuestas.UseCustomBackColor = true;
+            this.tileApuestas.UseCustomForeColor = true;
+            this.tileApuestas.UseSelectable = true;
+            this.tileApuestas.UseStyleColors = true;
+            this.tileApuestas.UseTileImage = true;
+            this.tileApuestas.Click += new System.EventHandler(this.button_Click);
             // 
             // linkBack
             // 
@@ -288,16 +306,17 @@ namespace Proyecto1Tiempos.Vistas
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ganadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sorteosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dineroToolStripMenuItem;
         private MetroFramework.Controls.MetroPanel pnlMenu;
         private MetroFramework.Controls.MetroLink linkBack;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel pnlBackMenu;
-        private MetroFramework.Controls.MetroTile UResultados;
-        private MetroFramework.Controls.MetroTile USorteos;
-        private MetroFramework.Controls.MetroTile UApuestas;
+        private MetroFramework.Controls.MetroTile tileResultados;
+        private MetroFramework.Controls.MetroTile tileSorteos;
+        private MetroFramework.Controls.MetroTile tileApuestas;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroPanel pnlTitulo;
+        private System.Windows.Forms.ToolStripMenuItem gananciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gananciaToolStripMenuItem;
     }
 }

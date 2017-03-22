@@ -1,6 +1,6 @@
 ﻿namespace Proyecto1Tiempos.Vistas
 {
-    partial class UResultados
+    partial class UGanancia
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -33,9 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dineroGanado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gananciaMinima = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gananciaMaxima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +56,8 @@
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
-            this.numero,
-            this.monto,
-            this.dineroGanado});
+            this.gananciaMinima,
+            this.gananciaMaxima});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -71,7 +69,7 @@
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(25, 25);
+            this.metroGrid1.Location = new System.Drawing.Point(26, 26);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -84,39 +82,31 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(518, 302);
+            this.metroGrid1.Size = new System.Drawing.Size(515, 297);
             this.metroGrid1.TabIndex = 0;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "Sorteo";
             this.nombre.Name = "nombre";
-            this.nombre.Width = 223;
+            this.nombre.Width = 270;
             // 
-            // numero
+            // gananciaMinima
             // 
-            this.numero.HeaderText = "Número";
-            this.numero.Name = "numero";
-            this.numero.Width = 80;
+            this.gananciaMinima.HeaderText = "Ganancia Mínima";
+            this.gananciaMinima.Name = "gananciaMinima";
             // 
-            // monto
+            // gananciaMaxima
             // 
-            this.monto.HeaderText = "Monto Apostado";
-            this.monto.Name = "monto";
-            this.monto.Width = 80;
+            this.gananciaMaxima.HeaderText = "Ganancia Máxima";
+            this.gananciaMaxima.Name = "gananciaMaxima";
             // 
-            // dineroGanado
-            // 
-            this.dineroGanado.HeaderText = "Dinero Ganado";
-            this.dineroGanado.Name = "dineroGanado";
-            this.dineroGanado.Width = 93;
-            // 
-            // UResultados
+            // UGanancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroGrid1);
-            this.Name = "UResultados";
+            this.Name = "UGanancia";
             this.Size = new System.Drawing.Size(569, 348);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
@@ -127,8 +117,7 @@
 
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dineroGanado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gananciaMinima;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gananciaMaxima;
     }
 }
