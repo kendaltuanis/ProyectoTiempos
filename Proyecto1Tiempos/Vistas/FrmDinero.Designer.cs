@@ -80,7 +80,6 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtDinero);
             this.Name = "FrmDinero";
-            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Dinero disponible";
             this.ResumeLayout(false);
 

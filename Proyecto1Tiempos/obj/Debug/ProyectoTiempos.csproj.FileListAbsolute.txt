@@ -40,3 +40,10 @@ C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Ti
 C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UNuevoSorteo.resources
 C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.FrmDinero.resources
 C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.UGanancia.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\obj\Debug\Proyecto1Tiempos.Vistas.FrmAgregarUsuario.resources
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\BCrypt.Net.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\BCrypt.Net.pdb
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\BCrypt.Net.xml
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\MySql.Data.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\System.Data.SQLite.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\ProyectoTiempos\Proyecto1Tiempos\bin\Debug\System.Data.SQLite.xml

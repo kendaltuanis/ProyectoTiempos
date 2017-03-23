@@ -75,7 +75,7 @@ namespace Proyecto1Tiempos.Vistas
             this.ganadoresToolStripMenuItem,
             this.gananciaToolStripMenuItem});
             this.contextMenuOpciones.Name = "contextMenuOpciones";
-            this.contextMenuOpciones.Size = new System.Drawing.Size(182, 92);
+            this.contextMenuOpciones.Size = new System.Drawing.Size(162, 92);
             // 
             // administrarToolStripMenuItem
             // 
@@ -83,7 +83,7 @@ namespace Proyecto1Tiempos.Vistas
             this.sorteosToolStripMenuItem,
             this.gananciasToolStripMenuItem});
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.administrarToolStripMenuItem.Text = "Mantenimientos";
             // 
             // sorteosToolStripMenuItem
@@ -104,15 +104,15 @@ namespace Proyecto1Tiempos.Vistas
             // ganadoresToolStripMenuItem
             // 
             this.ganadoresToolStripMenuItem.Name = "ganadoresToolStripMenuItem";
-            this.ganadoresToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.ganadoresToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.ganadoresToolStripMenuItem.Tag = "UGanadores";
-            this.ganadoresToolStripMenuItem.Text = "Números ganadores";
+            this.ganadoresToolStripMenuItem.Text = "Terminar Sorteo";
             this.ganadoresToolStripMenuItem.Click += new System.EventHandler(this.ToolStrips_Click);
             // 
             // gananciaToolStripMenuItem
             // 
             this.gananciaToolStripMenuItem.Name = "gananciaToolStripMenuItem";
-            this.gananciaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.gananciaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.gananciaToolStripMenuItem.Tag = "UGanancia";
             this.gananciaToolStripMenuItem.Text = "Ganancia";
             this.gananciaToolStripMenuItem.Click += new System.EventHandler(this.ToolStrips_Click);

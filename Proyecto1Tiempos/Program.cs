@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto1Tiempos.Vistas;
+using System.Configuration;
+using DBAccess;
 
 namespace Proyecto1Tiempos
 {
-    static class Program
+   public static class Program
     {
+        public static DBAccess.DBAccess connection;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -17,6 +20,10 @@ namespace Proyecto1Tiempos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            string connectionString = ConfigurationManager.ConnectionStrings["Pg"].ConnectionString;
+            Program.connection = new PgAccess(connectionString);
+
             Application.Run(new FrmLogin());
         }
     }
