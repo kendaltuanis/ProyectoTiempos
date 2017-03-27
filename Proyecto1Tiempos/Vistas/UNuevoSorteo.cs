@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Controls;
+using Proyecto1Tiempos.Controladores;
 
 
 namespace Proyecto1Tiempos.Vistas
 {
     public partial class UNuevoSorteo : MetroUserControl
     {
+        private SorteoControl osorteo;
+
         public UNuevoSorteo()
         {
             InitializeComponent();
+            this.osorteo = new SorteoControl();
         }
 
         private void metroLabel2_Click(object sender, EventArgs e)
@@ -24,5 +28,9 @@ namespace Proyecto1Tiempos.Vistas
 
         }
 
+        private void btnSorteo_Click(object sender, EventArgs e)
+        {
+            osorteo.Insertar(txtNombre.Text, txtDescripcion.Text, (Convert.ToDateTime(txtFecha.Text)));
+        }
     }
 }

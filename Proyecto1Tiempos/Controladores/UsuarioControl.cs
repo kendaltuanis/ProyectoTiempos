@@ -9,22 +9,22 @@ using DBAccess;
 
 namespace Proyecto1Tiempos.Controladores
 {
-    class UsuariosControl : ErrorHandler
+    class UsuarioControl : ErrorHandler
     {
-        private Usuarios ousuarios;
+        private Usuario ousuarios;
 
-        public UsuariosControl()
+        public UsuarioControl()
         {
-           this.ousuarios = new Usuarios();
+           this.ousuarios = new Usuario();
         }
 
         public DataTable Refrescar() {
            return ousuarios.Refrescar();
         }
 
-        public void Insertar(String nombre, String correo, String usuario, String clave) {
-            ousuarios = new Usuarios(nombre, correo, usuario, clave);
-            ousuarios.Insertar();
+        public int Insertar(String nombre, String correo, String usuario, String clave) {
+            ousuarios = new Usuario(nombre, correo, usuario, clave);
+            return ousuarios.Insertar();
         }
     }
 }

@@ -8,15 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Controls;
+using Proyecto1Tiempos.Controladores;
+using Proyecto1Tiempos.Utils;
 
 namespace Proyecto1Tiempos.Vistas
 {
     public partial class UApuestas : MetroUserControl
     {
+        SorteoControl osorteocontrol;
+
         public UApuestas()
         {
             InitializeComponent();
             CrearBotonesNumeros();
+            osorteocontrol = new SorteoControl();
+            ComboBoxs.Sorteos(cmbSorteo);
         }
 
         private void CrearBotonesNumeros() {

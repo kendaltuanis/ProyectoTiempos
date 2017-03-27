@@ -16,69 +16,71 @@ namespace Proyecto1Tiempos.Vistas
 {
     public partial class FrmLogin : MetroForm
     {
-        private UsuariosControl usuarioControl;
+        private UsuarioControl usuarioControl;
+        static int id;
        
         public FrmLogin()
         {
             InitializeComponent();
-            this.usuarioControl = new UsuariosControl();
+            this.usuarioControl = new UsuarioControl();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Login();
-
-          //  this.Hide();
-           // FrmMenu menu = new FrmMenu();
-            //menu.Show();
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            FrmAgregarUsuario oUser = new FrmAgregarUsuario();
-            oUser.ShowDialog();
+            FrmAgregarUsuario ofrmAgregarusuario = new FrmAgregarUsuario();
+            ofrmAgregarusuario.ShowDialog();
+            IniciarSesion();
+
         }
 
-        private void Login() {
+        private void Login()
+        {
             DataTable dt = this.usuarioControl.Refrescar();
-            foreach (DataRow row in dt.Rows)
-            {            
-                foreach (DataColumn col in dt.Columns) {
-                    String n = col.ColumnName;
-                    if (n.Equals("usuario")) {
-                        String value = row[col.ColumnName].ToString();
-                        if (value.Equals(txtUsuario.Text)) {
-                            Console.WriteLine("Usuario si");
-                        }
-                    }
+            bool usuario, clave;
 
-                    if (n.Equals("clave"))
-                    {
-                        String value = row[col.ColumnName].ToString();
-                       Boolean verificar= BCrypt.Net.BCrypt.Verify(txtClave.Text, value);
+            var query = from p in dt.AsEnumerable()
+            select new {id = p.Field<int>("id"), user = p.Field<string>("usuario"),
+                pass = p.Field<string>("clave"), admin = p.Field<Boolean>("admin")};          
 
-                        if (verificar)
-                        {
-                            Console.WriteLine("Contraseña si");
-                        }
-                    }
+            foreach (var item in query)
+                {
+                    usuario = (item.user.Equals(txtUsuario.Text) ? true : false);
+                    clave = BCrypt.Net.BCrypt.Verify(txtClave.Text, item.pass);
+
+                if (usuario && clave) {
+                    id = item.id;
+
+                    IniciarSesion(item.admin);
+                    return;
                 }
-            }
-            /*
-            DataColumn colN = dt.Columns["nombre_completo"];
-            DataColumn colC = dt.Columns["clave"];
-            for (int i = 0; i < colN.Colu; i++)
-            {
+
+                usuario = false;   clave = false;
 
             }
-            */
         }
 
-        
+        private void IniciarSesion(Boolean admin =false) {
+            FrmMenu menu = new FrmMenu(id,admin);
+            menu.Show();
+            this.Hide();
+        }
 
+        public static void SetId(int ide) {
+            id = ide;
+        }
+
+        private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) {
+                Login();
+            }      
+        }
 
         // bycript -- hashing -- hace salt key
-        // 
-
     }
 }

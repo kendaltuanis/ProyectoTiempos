@@ -80,7 +80,6 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             // 
             // 
             // 
@@ -97,7 +96,7 @@
             this.txtUsuario.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtUsuario.Lines = new string[0];
             this.txtUsuario.Location = new System.Drawing.Point(184, 188);
-            this.txtUsuario.MaxLength = 32767;
+            this.txtUsuario.MaxLength = 15;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.PromptText = "Usuario";
@@ -133,7 +132,7 @@
             this.txtClave.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtClave.Lines = new string[0];
             this.txtClave.Location = new System.Drawing.Point(184, 224);
-            this.txtClave.MaxLength = 32767;
+            this.txtClave.MaxLength = 10;
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.PromptText = "Contraseña";
@@ -150,6 +149,7 @@
             this.txtClave.WaterMark = "Contraseña";
             this.txtClave.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClave.WaterMarkFont = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
             // FrmLogin
             // 

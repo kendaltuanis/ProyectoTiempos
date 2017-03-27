@@ -16,12 +16,12 @@ namespace Proyecto1Tiempos.Vistas
 {
     public partial class FrmAgregarUsuario : MetroForm
     {
-        private UsuariosControl usuarioControl;
+        private UsuarioControl usuarioControl;
 
         public FrmAgregarUsuario()
         {
             InitializeComponent();
-            this.usuarioControl = new UsuariosControl();
+            this.usuarioControl = new UsuarioControl();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -36,10 +36,20 @@ namespace Proyecto1Tiempos.Vistas
 
             string myHash = BCrypt.Net.BCrypt.HashPassword(clave, mySalt);
 
-            this.usuarioControl.Insertar(txtNombre.Text, txtCorreo.Text, txtUsuario.Text, myHash);
+            FrmLogin.SetId(this.usuarioControl.Insertar(txtNombre.Text, txtCorreo.Text, txtUsuario.Text, myHash)); 
 
             if (usuarioControl.isError) {
                 Console.WriteLine(usuarioControl.errorDescription);
+                return;
+            }
+            this.Close();
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                AgregarUsuario();
             }
         }
     }

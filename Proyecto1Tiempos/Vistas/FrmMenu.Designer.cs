@@ -66,6 +66,7 @@ namespace Proyecto1Tiempos.Vistas
             this.linkOpciones.Size = new System.Drawing.Size(49, 36);
             this.linkOpciones.TabIndex = 0;
             this.linkOpciones.UseSelectable = true;
+            this.linkOpciones.Visible = false;
             this.linkOpciones.Click += new System.EventHandler(this.linkOpciones_Click);
             // 
             // contextMenuOpciones
@@ -75,7 +76,7 @@ namespace Proyecto1Tiempos.Vistas
             this.ganadoresToolStripMenuItem,
             this.gananciaToolStripMenuItem});
             this.contextMenuOpciones.Name = "contextMenuOpciones";
-            this.contextMenuOpciones.Size = new System.Drawing.Size(162, 92);
+            this.contextMenuOpciones.Size = new System.Drawing.Size(162, 70);
             // 
             // administrarToolStripMenuItem
             // 
@@ -89,7 +90,7 @@ namespace Proyecto1Tiempos.Vistas
             // sorteosToolStripMenuItem
             // 
             this.sorteosToolStripMenuItem.Name = "sorteosToolStripMenuItem";
-            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sorteosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.sorteosToolStripMenuItem.Tag = "UNuevoSorteo";
             this.sorteosToolStripMenuItem.Text = "Nuevo Sorteo";
             this.sorteosToolStripMenuItem.Click += new System.EventHandler(this.ToolStrips_Click);
@@ -97,7 +98,7 @@ namespace Proyecto1Tiempos.Vistas
             // gananciasToolStripMenuItem
             // 
             this.gananciasToolStripMenuItem.Name = "gananciasToolStripMenuItem";
-            this.gananciasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gananciasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.gananciasToolStripMenuItem.Text = "Dinero";
             this.gananciasToolStripMenuItem.Click += new System.EventHandler(this.gananciasToolStripMenuItem_Click);
             // 

@@ -30,12 +30,12 @@
         {
             this.pnlBotones = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cmbSorteo = new MetroFramework.Controls.MetroComboBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblNumero = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pnlBotones.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel1.Controls.Add(this.richTextBox1);
-            this.metroPanel1.Controls.Add(this.metroComboBox1);
+            this.metroPanel1.Controls.Add(this.cmbSorteo);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.metroTextBox1);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -76,6 +76,27 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 203);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(174, 133);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "Número: 25 Apuesta: 65000\nNúmero: 32 Apuesta: 10000\nNúmero: 9 Apuesta: 2500";
+            // 
+            // cmbSorteo
+            // 
+            this.cmbSorteo.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.cmbSorteo.FormattingEnabled = true;
+            this.cmbSorteo.ItemHeight = 23;
+            this.cmbSorteo.Location = new System.Drawing.Point(3, 125);
+            this.cmbSorteo.Name = "cmbSorteo";
+            this.cmbSorteo.PromptText = "Sorteo";
+            this.cmbSorteo.Size = new System.Drawing.Size(174, 29);
+            this.cmbSorteo.TabIndex = 6;
+            this.cmbSorteo.UseSelectable = true;
             // 
             // metroButton1
             // 
@@ -142,26 +163,6 @@
             this.lblNumero.TabIndex = 2;
             this.lblNumero.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(3, 125);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.PromptText = "Sorteo";
-            this.metroComboBox1.Size = new System.Drawing.Size(174, 29);
-            this.metroComboBox1.TabIndex = 6;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 203);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(174, 133);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "Número: 25 Apuesta: 65000\nNúmero: 32 Apuesta: 10000\nNúmero: 9 Apuesta: 2500";
-            // 
             // UApuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,7 +185,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cmbSorteo;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

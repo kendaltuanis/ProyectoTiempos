@@ -16,11 +16,14 @@ namespace Proyecto1Tiempos.Vistas
 
         private Control[] tiles;
         private String title = "Tiempos";
+        private int id = 0;
 
-        public FrmMenu()
+        public FrmMenu(int id,Boolean admin = false)
         {
             InitializeComponent();
             MenuTiles();
+            this.id = id;
+            Admin(admin);
         }
         
               
@@ -38,6 +41,11 @@ namespace Proyecto1Tiempos.Vistas
             MetroTile button = sender as MetroTile;
             BusquedaUser(button.Tag.ToString());
         
+        }
+
+        private void Admin(Boolean admin) {
+            if (admin)
+                linkOpciones.Visible = true;
         }
 
         private void BusquedaUser(String name) {
@@ -91,8 +99,6 @@ namespace Proyecto1Tiempos.Vistas
                 tiles[cont] = item;
                 cont++;
             }
-
-            
         }
 
         // Método que se usa para limpiar los controles del panel 'pnlMain' y dejarlo en blanco

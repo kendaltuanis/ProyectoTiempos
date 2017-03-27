@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DBAccess;
 using HelpersSQL;
+using HelpersSQL.Enums;
 
 namespace Proyecto1Tiempos.Modelos
 {
@@ -56,7 +57,7 @@ namespace Proyecto1Tiempos.Modelos
 
         }
 
-        public void Insertar()
+        public int Insertar()
         {
             Dictionary<string, object> parametros = new Dictionary<string, object>();
             parametros.Add("nombre_completo", this.nombre);
@@ -64,12 +65,14 @@ namespace Proyecto1Tiempos.Modelos
             parametros.Add("usuario", this.usuario);
             parametros.Add("clave", this.clave);
 
-            Program.connection.SqlScalar(sqlHelper.InsertSql(parametros.Select(i => i.Key).ToArray()), parametros);
+           int id= Convert.ToInt32(Program.connection.SqlScalar(sqlHelper.InsertSql(parametros.Select(i => i.Key).ToArray(),DBMotor.Postgresql,new String[] {"id"}), parametros));
             if (Program.connection.isError)
             {
                 this.isError = true;
                 this.errorDescription = Program.connection.errorDescription;
             }
+
+            return id;
         }
 
     }
