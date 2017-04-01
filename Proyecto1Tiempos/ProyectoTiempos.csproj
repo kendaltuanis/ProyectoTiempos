@@ -74,14 +74,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ApuestaControl.cs" />
+    <Compile Include="Controladores\DineroControl.cs" />
+    <Compile Include="Controladores\GanadoresControl.cs" />
+    <Compile Include="Controladores\GananciasControl.cs" />
+    <Compile Include="Controladores\ResultadosControl.cs" />
     <Compile Include="Controladores\SorteoControl.cs" />
     <Compile Include="Controladores\UsuarioControl.cs" />
+    <Compile Include="Modelos\Apuesta.cs" />
+    <Compile Include="Modelos\Dinero.cs" />
+    <Compile Include="Modelos\Ganadores.cs" />
+    <Compile Include="Modelos\Ganancias.cs" />
+    <Compile Include="Modelos\Resultados.cs" />
     <Compile Include="Modelos\Sorteo.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Usuarios.cs" />
     <Compile Include="Utils\ComboBoxs.cs" />
+    <Compile Include="Utils\Messages.cs" />
     <Compile Include="Vistas\FrmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

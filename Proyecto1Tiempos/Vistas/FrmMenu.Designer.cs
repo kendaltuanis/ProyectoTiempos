@@ -76,7 +76,7 @@ namespace Proyecto1Tiempos.Vistas
             this.ganadoresToolStripMenuItem,
             this.gananciaToolStripMenuItem});
             this.contextMenuOpciones.Name = "contextMenuOpciones";
-            this.contextMenuOpciones.Size = new System.Drawing.Size(162, 70);
+            this.contextMenuOpciones.Size = new System.Drawing.Size(162, 92);
             // 
             // administrarToolStripMenuItem
             // 

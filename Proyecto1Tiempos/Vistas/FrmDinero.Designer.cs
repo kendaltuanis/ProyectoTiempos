@@ -40,6 +40,7 @@
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseSelectable = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtDinero
             // 
@@ -70,6 +71,7 @@
             this.txtDinero.UseSelectable = true;
             this.txtDinero.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDinero.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDinero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDinero_KeyPress);
             this.txtDinero.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDinero_KeyUp);
             // 
             // FrmDinero

@@ -23,6 +23,7 @@ namespace Proyecto1Tiempos
 
             string connectionString = ConfigurationManager.ConnectionStrings["Pg"].ConnectionString;
             Program.connection = new PgAccess(connectionString);
+            
 
             Application.Run(new FrmLogin());
         }

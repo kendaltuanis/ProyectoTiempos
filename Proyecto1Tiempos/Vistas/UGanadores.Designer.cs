@@ -68,6 +68,7 @@
             this.btnRandom.TabIndex = 12;
             this.btnRandom.Text = "Random";
             this.btnRandom.UseSelectable = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
             // btnTerminarSorteo
             // 
@@ -77,6 +78,7 @@
             this.btnTerminarSorteo.TabIndex = 11;
             this.btnTerminarSorteo.Text = "Terminar Sorteo";
             this.btnTerminarSorteo.UseSelectable = true;
+            this.btnTerminarSorteo.Click += new System.EventHandler(this.btnTerminarSorteo_Click);
             // 
             // txtTercerNumero
             // 

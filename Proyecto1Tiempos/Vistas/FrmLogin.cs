@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using MetroFramework.Controls;
-using BCrypt.Net;
 using Proyecto1Tiempos.Controladores;
+using System.Threading;
 
 namespace Proyecto1Tiempos.Vistas
 {
     public partial class FrmLogin : MetroForm
     {
         private UsuarioControl usuarioControl;
-        static int id;
-       
+        public static int id;
+        public static Boolean admin;
+        private const string error = "Usuario o contraseña incorrecta";
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -34,7 +30,8 @@ namespace Proyecto1Tiempos.Vistas
         {
             FrmAgregarUsuario ofrmAgregarusuario = new FrmAgregarUsuario();
             ofrmAgregarusuario.ShowDialog();
-            IniciarSesion();
+            if(ofrmAgregarusuario.Open())
+                IniciarSesion();
 
         }
 
@@ -54,18 +51,30 @@ namespace Proyecto1Tiempos.Vistas
 
                 if (usuario && clave) {
                     id = item.id;
+                    if (item.admin) {
+                        admin = true;
+                    }
 
-                    IniciarSesion(item.admin);
+                    IniciarSesion();
                     return;
                 }
 
                 usuario = false;   clave = false;
-
             }
+
+            new Thread(MessageError).Start();          
         }
 
-        private void IniciarSesion(Boolean admin =false) {
-            FrmMenu menu = new FrmMenu(id,admin);
+        private void MessageError() {
+            
+            this.Invoke((MethodInvoker)delegate {
+                MetroFramework.MetroMessageBox.Show(this, error, "Error", 100);
+            });
+            
+        }
+
+        private void IniciarSesion() {
+            FrmMenu menu = new FrmMenu();
             menu.Show();
             this.Hide();
         }

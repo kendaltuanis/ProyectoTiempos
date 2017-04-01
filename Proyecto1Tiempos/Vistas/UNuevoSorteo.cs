@@ -23,14 +23,17 @@ namespace Proyecto1Tiempos.Vistas
             this.osorteo = new SorteoControl();
         }
 
-        private void metroLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSorteo_Click(object sender, EventArgs e)
         {
             osorteo.Insertar(txtNombre.Text, txtDescripcion.Text, (Convert.ToDateTime(txtFecha.Text)));
+            if (Program.connection.isError) {
+                Console.WriteLine(Program.connection.errorDescription);
+                return;
+            }
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtFecha.Clear();
         }
     }
 }

@@ -42,7 +42,7 @@
             this.btnSorteo.Location = new System.Drawing.Point(396, 256);
             this.btnSorteo.Name = "btnSorteo";
             this.btnSorteo.Size = new System.Drawing.Size(122, 28);
-            this.btnSorteo.TabIndex = 16;
+            this.btnSorteo.TabIndex = 3;
             this.btnSorteo.Text = "Nuevo Sorteo";
             this.btnSorteo.UseSelectable = true;
             this.btnSorteo.Click += new System.EventHandler(this.btnSorteo_Click);
@@ -74,7 +74,7 @@
             this.txtDescripcion.SelectionStart = 0;
             this.txtDescripcion.ShortcutsEnabled = true;
             this.txtDescripcion.Size = new System.Drawing.Size(338, 29);
-            this.txtDescripcion.TabIndex = 13;
+            this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.UseSelectable = true;
             this.txtDescripcion.WaterMark = "Sorteo Navideño #785--Sorteo #545";
             this.txtDescripcion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -107,7 +107,7 @@
             this.txtNombre.SelectionStart = 0;
             this.txtNombre.ShortcutsEnabled = true;
             this.txtNombre.Size = new System.Drawing.Size(338, 29);
-            this.txtNombre.TabIndex = 14;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.UseSelectable = true;
             this.txtNombre.WaterMark = "Domingo, 19 de Marzo 2017";
             this.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -159,7 +159,7 @@
             this.txtFecha.Mask = "00/00/0000 00:00";
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(172, 27);
-            this.txtFecha.TabIndex = 17;
+            this.txtFecha.TabIndex = 2;
             this.txtFecha.ValidatingType = typeof(System.DateTime);
             // 
             // UNuevoSorteo

@@ -16,14 +16,12 @@ namespace Proyecto1Tiempos.Vistas
 
         private Control[] tiles;
         private String title = "Tiempos";
-        private int id = 0;
 
-        public FrmMenu(int id,Boolean admin = false)
+        public FrmMenu()
         {
             InitializeComponent();
             MenuTiles();
-            this.id = id;
-            Admin(admin);
+            Admin();
         }
         
               
@@ -43,9 +41,10 @@ namespace Proyecto1Tiempos.Vistas
         
         }
 
-        private void Admin(Boolean admin) {
-            if (admin)
+        private void Admin() {
+            if (FrmLogin.admin) {
                 linkOpciones.Visible = true;
+            }             
         }
 
         private void BusquedaUser(String name) {
@@ -141,6 +140,10 @@ namespace Proyecto1Tiempos.Vistas
         {
             FrmDinero ofrmDinero = new FrmDinero();
             ofrmDinero.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

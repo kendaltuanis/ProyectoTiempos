@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DBAccess;
 using HelpersSQL;
-using HelpersSQL.Enums;
 
 namespace Proyecto1Tiempos.Modelos
 {

@@ -30,10 +30,10 @@
         {
             this.pnlBotones = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxtApuestas = new System.Windows.Forms.RichTextBox();
             this.cmbSorteo = new MetroFramework.Controls.MetroComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.btnApostar = new MetroFramework.Controls.MetroButton();
+            this.txtMonto = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblNumero = new MetroFramework.Controls.MetroLabel();
             this.pnlBotones.SuspendLayout();
@@ -59,10 +59,10 @@
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel1.Controls.Add(this.richTextBox1);
+            this.metroPanel1.Controls.Add(this.rtxtApuestas);
             this.metroPanel1.Controls.Add(this.cmbSorteo);
-            this.metroPanel1.Controls.Add(this.metroButton1);
-            this.metroPanel1.Controls.Add(this.metroTextBox1);
+            this.metroPanel1.Controls.Add(this.btnApostar);
+            this.metroPanel1.Controls.Add(this.txtMonto);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.lblNumero);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -75,72 +75,72 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
-            // richTextBox1
+            // rtxtApuestas
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 203);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(174, 133);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "Número: 25 Apuesta: 65000\nNúmero: 32 Apuesta: 10000\nNúmero: 9 Apuesta: 2500";
+            this.rtxtApuestas.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rtxtApuestas.Location = new System.Drawing.Point(3, 203);
+            this.rtxtApuestas.Name = "rtxtApuestas";
+            this.rtxtApuestas.Size = new System.Drawing.Size(174, 133);
+            this.rtxtApuestas.TabIndex = 7;
+            this.rtxtApuestas.Text = "";
             // 
             // cmbSorteo
             // 
             this.cmbSorteo.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.cmbSorteo.FormattingEnabled = true;
-            this.cmbSorteo.ItemHeight = 23;
+            this.cmbSorteo.ItemHeight = 19;
             this.cmbSorteo.Location = new System.Drawing.Point(3, 125);
             this.cmbSorteo.Name = "cmbSorteo";
             this.cmbSorteo.PromptText = "Sorteo";
-            this.cmbSorteo.Size = new System.Drawing.Size(174, 29);
+            this.cmbSorteo.Size = new System.Drawing.Size(174, 25);
             this.cmbSorteo.TabIndex = 6;
             this.cmbSorteo.UseSelectable = true;
             // 
-            // metroButton1
+            // btnApostar
             // 
-            this.metroButton1.Location = new System.Drawing.Point(3, 160);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(174, 23);
-            this.metroButton1.TabIndex = 5;
-            this.metroButton1.Text = "Apostar";
-            this.metroButton1.UseSelectable = true;
+            this.btnApostar.Location = new System.Drawing.Point(3, 160);
+            this.btnApostar.Name = "btnApostar";
+            this.btnApostar.Size = new System.Drawing.Size(174, 23);
+            this.btnApostar.TabIndex = 5;
+            this.btnApostar.Text = "Apostar";
+            this.btnApostar.UseSelectable = true;
+            this.btnApostar.Click += new System.EventHandler(this.btnApostar_Click);
             // 
-            // metroTextBox1
+            // txtMonto
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(146, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox1.Icon = global::Proyecto1Tiempos.Properties.Resources.icon_money;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(3, 87);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Monto Apostar";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(174, 29);
-            this.metroTextBox1.TabIndex = 4;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Monto Apostar";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.CustomButton.Image = null;
+            this.txtMonto.CustomButton.Location = new System.Drawing.Point(146, 1);
+            this.txtMonto.CustomButton.Name = "";
+            this.txtMonto.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtMonto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMonto.CustomButton.TabIndex = 1;
+            this.txtMonto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMonto.CustomButton.UseSelectable = true;
+            this.txtMonto.CustomButton.Visible = false;
+            this.txtMonto.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtMonto.Icon = global::Proyecto1Tiempos.Properties.Resources.icon_money;
+            this.txtMonto.IconRight = true;
+            this.txtMonto.Lines = new string[0];
+            this.txtMonto.Location = new System.Drawing.Point(3, 87);
+            this.txtMonto.MaxLength = 32767;
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.PasswordChar = '\0';
+            this.txtMonto.PromptText = "Monto Apostar";
+            this.txtMonto.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMonto.SelectedText = "";
+            this.txtMonto.SelectionLength = 0;
+            this.txtMonto.SelectionStart = 0;
+            this.txtMonto.ShortcutsEnabled = true;
+            this.txtMonto.Size = new System.Drawing.Size(174, 29);
+            this.txtMonto.TabIndex = 4;
+            this.txtMonto.UseSelectable = true;
+            this.txtMonto.WaterMark = "Monto Apostar";
+            this.txtMonto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMonto.WaterMarkFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroLabel1
             // 
@@ -183,9 +183,9 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel lblNumero;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroTextBox txtMonto;
+        private MetroFramework.Controls.MetroButton btnApostar;
         private MetroFramework.Controls.MetroComboBox cmbSorteo;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxtApuestas;
     }
 }

@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using BCrypt.Net;
+using MetroFramework.Controls;
 using Proyecto1Tiempos.Controladores;
-
+using System.Text.RegularExpressions;
 
 namespace Proyecto1Tiempos.Vistas
 {
     public partial class FrmAgregarUsuario : MetroForm
     {
         private UsuarioControl usuarioControl;
+        private Boolean formatEmailConfirmed=false;
+        private Boolean open = false;
 
         public FrmAgregarUsuario()
         {
@@ -42,6 +37,7 @@ namespace Proyecto1Tiempos.Vistas
                 Console.WriteLine(usuarioControl.errorDescription);
                 return;
             }
+            open = true;
             this.Close();
         }
 
@@ -51,6 +47,65 @@ namespace Proyecto1Tiempos.Vistas
             {
                 AgregarUsuario();
             }
+        }
+
+        private void txtFieldsTextChanged(object sender, EventArgs e)
+        {
+            MetroTextBox textBox = sender as MetroTextBox;
+
+            if (string.IsNullOrEmpty(textBox.Text))
+            {
+                epError.SetError(textBox, "Campo necesario");
+                btnRegistrar.Enabled = ValidarTodos();
+                return;
+            }
+            epError.Clear();
+            btnRegistrar.Enabled = ValidarTodos();
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            String texto = txtCorreo.Text;
+
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(texto, expresion))
+            {
+                if (Regex.Replace(texto, expresion, String.Empty).Length == 0)
+                {
+                    epError.Clear();
+                    formatEmailConfirmed = true;
+                    btnRegistrar.Enabled = ValidarTodos();
+                }
+                else
+                {
+                    epError.SetError(txtCorreo, "Formato incorrecto");
+                    txtCorreo.Focus();                  
+                    btnRegistrar.Enabled = false;
+                    formatEmailConfirmed = false;
+                }
+            }
+            else
+            {
+                epError.SetError(txtCorreo, "Formato incorrecto");
+                btnRegistrar.Enabled = false;
+                formatEmailConfirmed = false;
+            }
+        }
+
+
+        private Boolean ValidarTodos() {
+
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtClave.Text)
+                || !formatEmailConfirmed ) {
+                return false;
+            }
+            return true;
+        }
+
+        public Boolean Open() {
+
+            return open;
         }
     }
 }
